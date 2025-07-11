@@ -1,0 +1,176 @@
+@media (max-width: 630px) {
+
+  /* Container principal */
+  #Travel {
+    width: 95% !important;
+    margin: 20px auto !important;
+    padding: 0 10px !important;
+  }
+
+  /* Banner em coluna */
+  .banner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .banner-text,
+  .banner-image {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+
+  .banner-image video,
+  .banner-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    display: block;
+  }
+
+  .cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .card {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    min-height: 250px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .diferenciais-lista {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .diferencial-item {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    min-height: 200px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .logos-empresas {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+
+  .logos-empresas img {
+    width: 100px !important;
+    height: auto !important;
+    filter: grayscale(100%);
+  }
+
+  /* BOTÃO DE MENU FIXO */
+   .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    padding: 10px;
+  }
+
+  /* MENU MOBILE (dropdown vertical) */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 80%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 999;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column; /* garantir que seja uma coluna */
+    align-items: flex-start; /* alinhado à esquerda */
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  .navbar ul li a:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+
+.suporte-tecnico iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border: none;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.suporte-tecnico {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+}
+
+.iframe-chat {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+}
+
+
+
+
+
+
+

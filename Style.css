@@ -1,0 +1,529 @@
+/* ==================== RESET E CONFIGURAÇÕES GERAIS ==================== */
+/* Remove margens e padding padrão e aplica box-sizing para facilitar controle */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== ESTILO DO BODY ==================== */
+/* Define cor de fundo, fonte principal e cor do texto padrão */
+body {
+  background-color: #1E1E1E;         /* Fundo escuro */
+  font-family: 'Poppins', sans-serif; /* Fonte principal */
+  color: black;                      /* Cor do texto padrão */
+}
+
+/* ==================== CONTAINER PRINCIPAL ==================== */
+/* Container que envolve todo o site */
+#Travel {
+  background-color: #F5F4F0;         /* Fundo claro */
+  width: 1120px;                     /* Largura fixa */
+  /* height: 2900px;  REMOVA esta linha */
+  margin: 48px auto 30px;            /* Centraliza horizontalmente, espaçamento vertical */
+  border-radius: 24px;               /* Bordas arredondadas */
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;            /* Conteúdo empilhado verticalmente */
+  min-height: 100vh;                 /* Altura mínima para preencher a tela */
+}
+
+/* ==================== LOGO NO HEADER ==================== */
+/* Container da logo no topo */
+.logoheader {
+  display: flex;
+  justify-content: center;           /* Centraliza horizontalmente */
+  align-items: center;               /* Centraliza verticalmente */
+  margin-bottom: 10px;               /* Espaço abaixo da logo */
+}
+
+/* Ajusta tamanho da imagem da logo */
+.logoheader img {
+  width: 30%;                       /* 30% da largura do container */
+  height: auto;                    /* Mantém proporção da imagem */
+}
+
+/* ==================== MENU DE NAVEGAÇÃO ==================== */
+.navbar {
+  width: 100%;                     /* Ocupa toda largura */
+}
+
+.navbar ul {
+  list-style: none;                /* Remove marcadores padrão */
+  display: flex;                   /* Menu em linha */
+  justify-content: center;         /* Centraliza os itens */
+  align-items: center;             /* Alinha verticalmente */
+  gap: 80px;                      /* Espaço entre itens */
+  padding: 0;
+  margin: 0 auto;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  position: relative;              /* Necessário para posicionar dropdown */
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  user-select: none;               /* Impede seleção do texto */
+}
+
+.navbar a:hover {
+  color: #296827;                 /* Verde escuro ao passar o mouse */
+}
+
+/* ==================== MENU DROPDOWN ==================== */
+.dropdown-menu {
+  opacity: 0;                    /* Invisível */
+  visibility: hidden;            /* Não interagível */
+  position: absolute;            /* Posicionamento absoluto */
+  top: 38px;
+  left: 50%;
+  background-color: #ffffff;    /* Fundo branco */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #222;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+  color: #296827;
+}
+
+/* ==================== MAIN (CONTEÚDO PRINCIPAL) ==================== */
+/* Estilo geral do main */
+main {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.banner-text {
+  flex: 1 1 400px; /* Ocupa espaço flexível mínimo 400px */
+}
+
+.banner-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #296827; /* Verde escuro */
+}
+
+.banner-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444; /* Cinza escuro */
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: #296827; /* Verde escuro */
+  color: white;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #1f4d1c; /* Verde mais escuro no hover */
+}
+
+.banner-image {
+  flex: 1 1 400px;
+}
+
+.banner-image img,
+.banner-image video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* ==================== SEÇÃO DE SERVIÇOS ==================== */
+.servicos {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.servicos h2 {
+  font-size: 2.4rem;
+  color: #296827;
+  margin-bottom: 40px;
+}
+
+.servicos h3 {
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Cards com serviços */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-size: cover;       /* Preenche toda a área do card com a imagem */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete imagem */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  flex: 1 1 220px;
+  max-width: 260px;
+  text-align: center;
+  color: white;                 /* Texto branco para contraste */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sobreposição escura para destacar o texto */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;                    /* cobre todo o card */
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.card h3,
+.card p {
+  position: relative;
+  z-index: 1;                  /* Texto fica sobre a sombra */
+}
+
+/* ==================== DIFERENCIAIS ==================== */
+.diferenciais {
+  background: #e6f1dc;           /* Fundo verde claro */
+  padding: 60px 20px;
+  border-radius: 24px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.diferenciais h2 {
+  font-size: 2.4rem;
+  color: #296827;
+  margin-bottom: 40px;
+}
+
+.diferenciais-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.diferencial-item {
+  flex: 1 1 250px;
+  max-width: 280px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Cobre toda a área, pode cortar a imagem */
+}
+
+.diferencial-item:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18); /* Sombra mais forte no hover */
+}
+
+.diferencial-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #296827;
+}
+
+.diferencial-item p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.4;
+}
+
+/* ==================== CALL TO ACTION (CTA) ==================== */
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: #296827;           /* Fundo verde escuro */
+  border-radius: 24px;
+  color: white;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cta .btn-primary {
+  background-color: white;
+  color: #296827;
+  padding: 16px 36px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+  background-color: #1f4d1c;
+  color: white;
+}
+
+/* ==================== EMPRESAS PARCEIRAS ==================== */
+.empresas-parceiras {
+  background-color: #f0f7ea;      /* Fundo verde claro */
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 24px;
+  margin: 60px 0 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.empresas-parceiras h2 {
+  font-size: 2.2rem;
+  color: #296827;
+  margin-bottom: 40px;
+}
+
+.carrossel-container {
+  overflow: hidden;               /* Esconde o conteúdo que sai da área */
+  width: 100%;
+}
+
+.logos-empresas {
+  display: flex;
+  gap: 60px;
+  animation: scrollCarrossel 20s linear infinite; /* Animação de movimento */
+}
+
+.logos-empresas img {
+  width: 160px;
+  height: auto;
+  filter: grayscale(100%);       /* Deixa em preto e branco */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logos-empresas img:hover {
+  filter: grayscale(0%);         /* Cor original ao passar o mouse */
+  transform: scale(1.05);        /* Leve aumento */
+}
+
+/* Animação que move o carrossel */
+@keyframes scrollCarrossel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==================== VÍDEO (no banner) ==================== */
+#video1 {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  object-fit: cover;             /* Ajusta a imagem dentro do container */
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 900px) {
+  .banner {
+    flex-direction: column;      /* Banner empilha verticalmente em telas menores */
+  }
+  .banner-text, .banner-image {
+    flex: 1 1 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .diferenciais-lista {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-nav ul {
+    flex-direction: column;      /* Menu do footer em coluna para telas pequenas */
+    gap: 15px;
+  }
+}
+
+/* ==================== RODAPÉ (FOOTER) ==================== */
+.site-footer {
+  background-color: #234d22;       /* Verde escuro que combina com o tema */
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 0 0 24px 24px;   /* Bordas arredondadas só na parte inferior */
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-nav ul li a {
+  color: #cde1be;               /* Verde claro suave */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #e6f4d9;               /* Verde mais claro no hover */
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 12px;
+  transition: transform 0.3s ease;
+  color: #cde1be;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);         /* Aumenta o ícone ao passar o mouse */
+  color: #e6f4d9;
+}
+
+.footer-copy {
+  font-weight: 500;
+  font-size: 14px;
+  color: #b2c8a9;
+  margin-top: 10px;
+}
+
+.suporte-tecnico {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.suporte-tecnico h2 {
+    text-align: center;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.suporte-tecnico p {
+    color: #000000;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font: bolder;
+}
+
+.suporte-tecnico form {
+    display: flex;
+    flex-direction: column;
+}
+
+ .menu-toggle {
+    display: none;
+ }
+
+ /* Estilo padrão do iframe */
+.iframe-chat {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+  overflow: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- =================== METADADOS =================== -->
+    <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsividade para dispositivos móveis -->
+
+    <!-- Ícone da aba do navegador -->
+    <link rel="icon" href="./Icon/alphaicon.ico" type="image/x-icon" />
+
+    <!-- Título da aba -->
+    <title>Alpha Broadcast</title>
+
+    <!-- =================== FONTS =================== -->
+    <!-- Importação das fontes do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- =================== ESTILOS =================== -->
+    <!-- CSS principal do site -->
+    <link rel="stylesheet" href="./Style.css" />
+
+    <!-- CSS exclusivo para mobile (até 630px) -->
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 630px)" />
+  </head>
+
+  <body>
+    <!-- =================== CONTAINER PRINCIPAL =================== -->
+    <div id="Travel">
+      
+      <!-- =================== CABEÇALHO =================== -->
+      <header>
+        <!-- Logo da empresa no cabeçalho -->
+        <div class="logoheader">
+          <img src="./Assets/logoheader.png" alt="LogoAlpha_Header" />
+        </div>
+
+        <!-- Botão de menu hambúrguer (exibido no mobile) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+
+        <!-- Menu de navegação -->
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="./Index.html">Início</a></li>
+            <li><a href="./serviços.html">Serviços</a></li>
+            <li><a href="https://wa.me/552120105247" target="_blank">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- =================== FIM DO CABEÇALHO =================== -->
+
+      <!-- =================== CONTEÚDO PRINCIPAL =================== -->
+      <main>
+
+        <!-- Seção do banner com vídeo e texto de introdução -->
+        <section class="banner">
+          <div class="banner-text">
+            <h1>Bem-vindo à Alpha Broadcast</h1>
+            <p>Conectando tecnologia e inovação para suas transmissões ao vivo, consultoria especializada e soluções completas em equipamentos.</p>
+            <a href="https://wa.me/552120105247?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20um%20or%C3%A7amento!%20%F0%9F%9B%91%F0%9F%8E%9E%EF%B8%8F%F0%9F%8E%A5" class="btn-primary" target="_blank">Consulte sobre nossos cursos</a>
+          </div>
+          <div class="banner-image">
+            <video id="video1" src="./vid/MexendoCamera.mp4" autoplay muted loop playsinline></video>
+          </div>
+        </section>
+
+        <!-- Seção de serviços oferecidos com cards -->
+        <section id="servicos" class="servicos">
+          <h2>Impulsione seu projeto</h2>
+          <div class="cards">
+            <!-- Card 1 -->
+            <article class="card" style="background-image: url('./img/futebol.jpg');">
+              <h3>Streaming Profissional</h3>
+              <p>Leve sua transmissão ao vivo para outro nível com estabilidade, qualidade de imagem e som de ponta, ideal para eventos, cultos, aulas ou shows.</p>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card" style="background-image: url('./img/suptec.jpg');">
+              <h3>Planejamento Estratégico</h3>
+              <p>Desenvolvemos planos personalizados para garantir o sucesso e eficiência do seu projeto de transmissão.</p>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card" style="background-image: url('./img/cameraprofissional.jpg');">
+              <h3>Equipamentos de Alta Performance</h3>
+              <p>Trabalhamos com venda e locação dos melhores equipamentos do mercado: câmeras, switchers, capturadoras e muito mais.</p>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card" style="background-image: url('./img/transmissao.jpg');">
+              <h3>Soluções Sob Medida</h3>
+              <p>Cada projeto é único. Desenvolvemos soluções técnicas personalizadas, garantindo excelência e resultados reais para o seu objetivo.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Seção de diferenciais da empresa -->
+        <section class="diferenciais">
+          <h2>Por que escolher a Alpha Broadcast?</h2>
+          <div class="diferenciais-lista">
+            <!-- Diferencial 1 -->
+            <div class="diferencial-item" style="background-image: url('./img/transmissão_alpha_bro.png');">
+              <div class="overlay-text">
+                <h4>Qualidade Garantida</h4>
+                <p>Equipamentos e serviços de ponta para garantir a melhor transmissão.</p>
+              </div>
+            </div>
+            <!-- Diferencial 2 -->
+            <div class="diferencial-item" style="background-image: url('./img/transmissão_alpha_bro_1.png');">
+              <div class="overlay-text">
+                <h4>Suporte Especializado</h4>
+                <p>Equipe técnica pronta para atender e solucionar suas demandas.</p>
+              </div>
+            </div>
+            <!-- Diferencial 3 -->
+            <div class="diferencial-item" style="background-image: url('./img/transmissão_alpha_bro_2.png');">
+              <div class="overlay-text">
+                <h4>Inovação Contínua</h4>
+                <p>Investimos em tecnologia para oferecer sempre o que há de melhor.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chamada para ação (CTA) -->
+        <section class="cta">
+          <h2>Pronto para transformar sua transmissão?</h2>
+          <a href="https://wa.me/552120105247?text=Ol%C3%A1%2C%20gostaria%20de%20realizar%20um%20or%C3%A7amento!%20%F0%9F%9B%91%F0%9F%8E%9E%EF%B8%8F%F0%9F%8E%A5" target="_blank" class="btn-primary">Fale conosco</a>
+        </section>
+
+        <!-- Seção com logotipos de empresas parceiras -->
+        <section class="empresas-parceiras">
+          <h2>Empresas que confiam em nosso trabalho</h2>
+          <div class="carrossel-container">
+            <div class="logos-empresas" id="logosCarrossel">
+              <img src="./img/Parceria/blackmagic.png" alt="Logo 1" />
+              <img src="./img/Parceria/broadmedia.png" alt="Logo 2" />
+              <img src="./img/Parceria/globo.png" alt="Logo 3" />
+              <img src="./img/Parceria/newtek.png" alt="Logo 4" />
+              <img src="./img/Parceria/panasonic.png" alt="Logo 5" />
+              <img src="./img/Parceria/record.png" alt="Logo 6" />
+              <img src="./img/Parceria/sony.png" alt="Logo 7" />
+              <img src="./img/Parceria/tvu.png" alt="Logo 8" />
+            </div>
+          </div>
+        </section>
+
+      </main>
+      <!-- =================== FIM DO MAIN =================== -->
+
+      <!-- =================== RODAPÉ =================== -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- Logo no rodapé -->
+          <div class="footer-logo">
+            <img src="./Assets/logoheader.png" alt="Alpha Broadcast Logo" />
+          </div>
+
+          <!-- Links de navegação no rodapé -->
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="./Index.html">Início</a></li>
+              <li><a href="./serviços.html">Serviços</a></li>
+              <li><a href="https://wa.me/552120105247" target="_blank">Contato</a></li>
+              <li><a href="https://wa.me/552120105247" target="_blank">Cursos</a></li>
+            </ul>
+          </nav>
+
+          <!-- Ícones de redes sociais -->
+          <div class="footer-social">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61578173223078" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.8v-6.9H8v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4H15c-1.3 0-1.7.8-1.7 1.6v1.9h3l-.5 2.9h-2.5v6.9A10 10 0 0 0 22 12"/></svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/alpha.broadcast_/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-5 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            </a>
+          </div>
+
+          <!-- Direitos autorais -->
+          <p class="footer-copy">&copy; 2025 Alpha Broadcast Services. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      <!-- =================== FIM DO RODAPÉ =================== -->
+
+    </div>
+
+    <!-- =================== SCRIPTS =================== -->
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
